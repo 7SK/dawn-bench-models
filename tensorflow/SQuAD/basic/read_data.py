@@ -278,11 +278,6 @@ def get_squad_data_filter(config):
 
 
 def update_config(config, data_sets):
-    config.max_num_sents = 0
-    config.max_sent_size = 0
-    config.max_ques_size = 0
-    config.max_word_size = 0
-    config.max_para_size = 0
     for data_set in data_sets:
         data = data_set.data
         shared = data_set.shared

@@ -16,6 +16,13 @@ flags.DEFINE_string("answer_path", "", "Answer path []")
 flags.DEFINE_string("eval_path", "", "Eval path []")
 flags.DEFINE_string("load_path", "", "Load path []")
 flags.DEFINE_string("shared_path", "", "Shared path []")
+flags.DEFINE_string("out_dir", "","output dir []")
+flags.DEFINE_string("save_dir", "", "save dir []")
+flags.DEFINE_string("log_dir", "", "log dir []")
+flags.DEFINE_string("eval_dir", "", "eval dir []")
+flags.DEFINE_string("answer_dir", "", "answer dir []")
+flags.DEFINE_string("load_dir", "", "load dir []")
+flags.DEFINE_string("shared_dir", "", "shared dir []")
 
 # Device placement
 flags.DEFINE_string("device", "/cpu:0", "default device for summing gradients. [/cpu:0]")
@@ -100,6 +107,17 @@ flags.DEFINE_bool("q2c_att", True, "question-to-context attention? [True]")
 flags.DEFINE_bool("c2q_att", True, "context-to-question attention? [True]")
 flags.DEFINE_bool("dynamic_att", False, "Dynamic attention [False]")
 
+flags.DEFINE_integer("max_num_sents", 0, "max num sents [0]")
+flags.DEFINE_integer("max_sent_size", 0, "max sent size [0]")
+flags.DEFINE_integer("max_ques_size", 0, "max ques size [0]")
+flags.DEFINE_integer("max_word_size", 0, "max word size [0]")
+flags.DEFINE_integer("max_para_size", 0, "max para size [0]")
+
+flags.DEFINE_integer("char_vocab_size", None, "char vocab size")
+flags.DEFINE_integer("word_emb_size", None, "word emb size")
+flags.DEFINE_integer("word_vocab_size", None, "word vocab size")
+
+flags.DEFINE_multi_float("emb_mat", None, "emb mat")
 
 def main(_):
     config = flags.FLAGS
